@@ -1,0 +1,17 @@
+name: Testing workflow Varibles
+
+on:
+  workflow_dispatch
+
+env:
+  cloud: Azure_cloud
+
+jobs: 
+ test_context_varible:
+  run-on : ubutun-latest
+  steps: 
+  - name: "Checking  test_context_varible"
+  run: |
+   echo "Reposiory name: ${{github.repository}}
+   echo "Workflow Name": ${{github.workflow}}
+   echo "Triggered by": ${{github.tigger_actor}}
